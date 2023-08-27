@@ -4,13 +4,10 @@ import { Client, Events, GatewayIntentBits, Utils } from "discord.js";
 import * as Commands from "./commands.js";
 import * as Status from "./status.js";
 import * as PrivateVoice from "./privateVoice.js";
-//import util from "node:util";
+import * as WebServer from "./webServer/main.js";
 
 const client = new Client({ intents: [GatewayIntentBits.GuildPresences, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, 512, 32768] });
 
-// function _getCallerFile(func) {
-//     return util.inspect(func);
-// }
 
 //EVENT subscription
 var eventSubscribers = [];
@@ -32,12 +29,11 @@ export function unsubscribe(event, callback){
 }
 
 
-
 //load commands
 Commands.initialize(client, subscribe, unsubscribe);
 Status.initialize(client, subscribe, unsubscribe);
 PrivateVoice.initialize(client, subscribe, unsubscribe);
-
+WebServer.initialize();
 
 
 //EVENTS

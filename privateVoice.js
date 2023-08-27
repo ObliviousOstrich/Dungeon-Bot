@@ -78,6 +78,13 @@ class Server {
             permissionOverwrites: this.createPermissions(interaction, true),
         });
 
+        const roles = interaction.guild.roles.cache.map(role => role);
+        roles.forEach(role => {
+            channel.permissionOverwrites.edit(role.id, { ViewChannel: false });
+        });
+        channel.permissionOverwrites.edit(interaction.user.id, { ViewChannel: true });
+        
+
         const privateChannel = {
             channel: channel,
             password: password,

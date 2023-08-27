@@ -10,6 +10,9 @@ better-sqlite3
 ffmpeg-static
 ytdl-core
 libsodium-wrappers
+ytpl
+express
+
 
 For hosting - add token.js to the root directory:
 export const token = "MYTOKEN";

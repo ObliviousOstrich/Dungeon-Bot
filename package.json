@@ -11,6 +11,8 @@
     "node-gyp": "^9.3.1",
     "string-progressbar": "^1.0.4",
     "util": "^0.12.5",
-    "ytdl-core": "^4.11.4"
+    "ws": "^8.13.0",
+    "ytdl-core": "^4.11.4",
+    "ytpl": "^2.3.0"
   }
 }

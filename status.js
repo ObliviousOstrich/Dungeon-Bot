@@ -12,7 +12,7 @@ export function initialize(_client, _subscribe, _unsubscribe){
 }
 
 async function clientReady(){
-  await setStatus(ActivityType.Playing, "with your butt");
+  await setStatus(ActivityType.Playing, "Phasmo 😈🤘🏼");
 }
 
 export async function setStatus(activity, message){
